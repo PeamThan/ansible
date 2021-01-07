@@ -1,0 +1,9 @@
+- name: Install python-psutil package
+  apt: name=python-psutil
+
+- name: Copy wallpaper file
+  copy: src=files/wallpaper.jpeg dest=/home/peam/.wallpaper.jpeg owner=peam group=peam mode=600
+
+- name: Set GNOME Wallpaper
+  become_user: peam
+  dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/peam/.wallpaper.jpeg'"

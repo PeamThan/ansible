@@ -6,4 +6,4 @@
 
 - name: Set GNOME Wallpaper
   become_user: peam
-  dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/peam/.wallpaper.jpeg'"
+  dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/peam/wallpaper.jpeg'"
